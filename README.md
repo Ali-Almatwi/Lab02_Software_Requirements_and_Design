@@ -1,7 +1,12 @@
 # LAB02: Domain-Specific Modeling
 
 ## Overview
-In this laboratory, I attempted to simulate various models, yet none were completed successfully. The initial model was a university management system, while the second was a vehicle. Each model was crafted to mirror real-life scenarios, focusing on the diverse entities within the models' classes. This approach offers a comprehensive view of the classes' structure, detailing how This approach offers a comprehensive view of the classes' structure, detailing how different components interact and integrate within each model. The university management system, for instance, includes modules for student registration, course management, and faculty administration, highlighting the intricate relationships and processes within an educational institution. On the other hand, the vehicle model delves into the mechanical and operational aspects, encompassing elements like engine performance, safety features, and user interface. Both models, though incomplete, aimed to provide an in-depth understanding of their respective systems, offering insights into the complexities and dynamics of real-world applications.
+
+In my laboratory work, I initially embarked on creating simulations that would mirror the intricate nature of their real-world counterparts. The first of these was a university management system, a model that incorporated classes such as `Course`, `Department`, and `Student` to replicate the interconnected operations of academic life. Despite my efforts, this model fell short of success. Following this, I constructed a vehicle model with classes like `Engine`, `Transmission`, and `Wheel`, hoping to capture the essence of mechanical and operational functionality of a vehicle. Unfortunately, this model too did not yield the successful outcome I had hoped for.
+
+Undeterred by these setbacks, I am now deeply engrossed in the development of a third model: an aircraft system. This model represents a more complex challenge, consisting of classes like `Aircraft`, `Wing`, `Fuselage`, and `Engine`, as well as a comprehensive `Avionics` system that includes `NavigationSystem` and `CommunicationSystem`. My objective with this third endeavor is to create a successful simulation that intricately demonstrates the workings of an aircraft, from the principles of aerodynamics captured by the `Wing` class to the technological advancements detailed in the `Avionics` class.
+
+As I continue to work on this aircraft system model, I remain hopeful that it will be the culmination of my learning experiences from the previous attempts. This time, I aim to achieve a functional and informative simulation that encapsulates the multifaceted aspects of aviation and serves as an invaluable learning tool for understanding the complexities of aircraft operation.
 
 ## Model 1 ( University )
 ## Features
@@ -76,6 +81,42 @@ When generating the network diagram, the classes apart from the means of transpo
 ## Target DSL Test
 
 Since I could not generate the Xtext in the step above, there was no way to run this step successfully. While I tried several other alternatives with many classes and features, many classes were not appearing after defining them in nodes and adding their edges. This seems to be mostly related to the kind of relationships that are chosen for the model either supertype, reference or composition relationships. Only a combination of supertype, reference and composition relationships that seem to work perfectly and have all the nodes together with connecting edges show in the final diagram.
+
+## Model 3 ( Aircraft )
+
+## Features 
+
+The Aircraft System Model is composed of several classes, each representing a key component of the aircraft's design and functionality:
+
+- **Aircraft**: Encapsulates the overall aircraft with attributes for model, maximum speed, range, and seating capacity. It includes a method for calculating performance metrics.
+
+- **Wing**: Critical for flight, with properties such as span, area, and sweep angle. It includes a method for calculating lift.
+
+- **Fuselage**: Represents the aircraft's main body with details on length, diameter, and material.
+
+- **Engine**: Models the aircraft's engines, detailing the type, thrust generated, and fuel consumption.
+
+- **Avionics**: Covers the electronic systems for communication and navigation, including manufacturer and model information.
+
+- **Control Surfaces**: Encompasses various control surfaces like rudders, elevators, and ailerons, each with attributes for area and maximum deflection angle.
+
+- **Winglet**: A subclass of Wing, detailing the additional aerodynamic surfaces at the wingtips with attributes for height and angle.
+
+- **Propulsion System**: Part of the Engine class, outlining the fuel type used and the system's efficiency.
+
+- **Navigation System**: A subclass of Avionics focused on the aircraft's navigation capabilities.
+
+- **Communication System**: Another subclass of Avionics, specifying the technology and frequency range for the aircraft's communication systems.
+
+- **Rudder**: A subclass of Control Surfaces, detailing the rudder's area and maximum deflection angle for effective yaw control.
+
+- **Elevator**: A subclass of Control Surfaces, detailing the elevator's area and maximum deflection angle for pitch control.
+
+- **Aileron**: A subclass of Control Surfaces, detailing the aileron's area and maximum deflection angle for roll control.
+
+## EMF Metamodel
+
+![6cfb7743-3e87-434e-8a4c-1a8a8e92b647](https://github.com/Ali-Almatwi/Lab02_Software_Requirements_and_Design/assets/148684334/b531a7fc-d744-4ff5-a321-12ebf705bc94)
 
 
 ## Challenges and Problem-Solving
